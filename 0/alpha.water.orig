@@ -34,7 +34,7 @@ boundaryField
     walls
     {
         type           contactAngle;
-        theta0         45;
+        theta0         60;
         limit          gradient;
         value          uniform 0;
     }
@@ -42,7 +42,7 @@ boundaryField
     frontAndBack
     {
         type           contactAngle;
-        theta0         45;
+        theta0         60;
         limit          gradient;
         value          uniform 0;
     }
