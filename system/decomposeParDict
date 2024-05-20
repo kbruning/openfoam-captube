@@ -1,4 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
+
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
@@ -14,8 +15,22 @@ FoamFile
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-numberOfSubdomains 176;
+numberOfSubdomains 88;
 
-method          scotch;
+decomposer      scotch;
+
+distributor     scotch;
+
+constraints
+{
+    refinementHistory
+    {
+        type            refinementHistory;
+    }
+}
+
+
+
+
 
 // ************************************************************************* //

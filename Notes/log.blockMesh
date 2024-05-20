@@ -1,0 +1,76 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  11
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 11-b39f3502f734
+Exec   : blockMesh
+Date   : May 20 2024
+Time   : 16:53:56
+Host   : "c-202-11"
+PID    : 22085
+I/O    : uncollated
+Case   : /21dayscratch/scr/k/b/kbruning/OpenFoam/CapTube2D
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading "blockMeshDict"
+
+Creating block mesh from
+    "system/blockMeshDict"
+No non-linear block edges defined
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 0.001
+    Block 0 cell size :
+        i : 5e-05 .. 5e-05 4.9875e-05 .. 4.9875e-05 5e-05 .. 5e-05 4.9875e-05 .. 4.9875e-05 
+        j : 5.0008788e-05 .. 5.0008788e-05 5.0006601e-05 .. 5.0006601e-05 5.0008788e-05 .. 5.0008788e-05 5.0006601e-05 .. 5.0006601e-05 
+        k : 0.0001
+
+There are no merge patch pairs edges
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (0 0 0) (0.00075 0.008 0.0001)
+  nPoints: 5152
+  nCells: 2400
+  nFaces: 9775
+  nInternalFaces: 4625
+----------------
+Patches
+----------------
+  patch 0 (start: 4625 size: 15) name: minY
+  patch 1 (start: 4640 size: 15) name: maxY
+  patch 2 (start: 4655 size: 320) name: walls
+  patch 3 (start: 4975 size: 4800) name: frontAndBack
+
+End
+

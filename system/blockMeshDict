@@ -18,23 +18,23 @@ convertToMeters 1e-3;
 vertices
 (
     (0 0 0)
-    (1.51 0 0)
-    (1.51 6 0)
-    (0 6 0)
-    (0 0 1.51)
-    (1.51 0 1.51)
-    (1.51 6 1.51)
-    (0 6 1.51)
+    (.75 0 0)
+    (0.6 8 0)
+    (0.15 8 0)
+    (0 0 .1)
+    (.75 0 .1)
+    (0.6 8 .1)
+    (0.15 8 .1)
 );
 
 blocks
 (
-    hex (0 1 2 3 4 5 6 7) (30 400 30) simpleGrading (1 1 1)
+    hex (0 1 2 3 4 5 6 7) (15 160 1) simpleGrading (1 1 1)
 );
 
 boundary
 (
-    inlet
+    minY
     {
         type patch;
         faces
@@ -42,7 +42,7 @@ boundary
             (1 5 4 0)
         );
     }
-    atmosphere
+    maxY
     {
         type patch;
         faces
@@ -57,11 +57,17 @@ boundary
         (
             (0 4 7 3)
             (2 6 5 1)
+        );
+    }
+    frontAndBack
+    {
+        type empty;
+        faces
+        (
             (0 3 2 1)
             (4 5 6 7)
-	);
+        );
     }
-
 );
 
 

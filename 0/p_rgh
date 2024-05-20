@@ -19,13 +19,15 @@ internalField   uniform 0;
 
 boundaryField
 {
-    inlet
+    #includeEtc "caseDicts/setConstraintTypes"
+
+    minY
     {
         type            fixedValue;
         value           uniform 0;
     }
 
-    atmosphere
+    maxY
     {
         type            fixedValue;
         value           uniform 0;
@@ -37,11 +39,11 @@ boundaryField
     }
 
 
-    frontAndBack
+/*  frontAndBack
     {
         type            fixedFluxPressure;
     }
-
+*/
 }
 
 

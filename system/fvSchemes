@@ -22,6 +22,7 @@ ddtSchemes
 gradSchemes
 {
     default         Gauss linear;
+    //default		cellLimited leastSquares 1;
 }
 
 divSchemes
@@ -34,6 +35,8 @@ divSchemes
 laplacianSchemes
 {
     default         Gauss linear corrected;
+    //default		Gauss linear limited 1;
+
 }
 
 interpolationSchemes
@@ -44,6 +47,7 @@ interpolationSchemes
 snGradSchemes
 {
     default         corrected;
+    //default		limited 1;
 }
 
 
