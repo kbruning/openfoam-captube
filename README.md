@@ -1,12 +1,30 @@
 # openfoam-captube
-Circular cross section capillary tube example with openfoam
+2D sloped wall capillary rise example with openfoam
 
+Run commands for 88 subdomains:
+
+  rm -r 0
+  mkdir 0
+  blockMesh > Notes/log.blockMesh
+  checkMesh > Notes/log.checkMesh
+  rm -r 0
+  cp -r orig.0 0
+
+  setFields > Notes/log.setFields
+  decomposePar > Notes/log.decomposePar
+
+  mpirun -np 88 foamRun -parallel > Notes/log.incompressibleVoF
+
+  reconstructPar > Notes/log.reconstructPar
+  rm -r processor*
 
 Geometry:
 
-  Tube diameter: 1.5 mm
+  Tube inlet diameter: 0.75 mm
 
-  Tube height: 6 mm, oriented in +y direction
+  Tube outlet diameter: 0.45 mm
+
+  Tube height: 8 mm, oriented in +y direction
 
 
 Oil parameters at 20°C:
@@ -17,8 +35,6 @@ Oil parameters at 20°C:
 
   interfacial tension: 0.032
 
-  contact angle with air and solid: 60°
-  
+  contact angle with air and solid: 75°
 
-Theoretical rise to common curve: 4.74 mm
 
